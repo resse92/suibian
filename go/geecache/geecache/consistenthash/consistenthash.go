@@ -20,7 +20,7 @@ type Map struct {
 // New creates a Map instance
 func New(replicas int, fn Hash) *Map {
 	m := &Map{
-		replicas: replicas,
+		replicas: replicas, // 虚拟节点
 		hash:     fn,
 		hashMap:  make(map[int]string),
 	}
