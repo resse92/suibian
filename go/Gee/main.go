@@ -7,11 +7,11 @@ import (
 
 func main() {
 	r := gee.New()
-	r.Get("/", func(c *gee.Context) {
+	r.GET("/", func(c *gee.Context) {
 		c.String(http.StatusOK, "<h1>Hello Gee</h1>")
 	})
 
-	r.Get("/hello", func(c *gee.Context) {
+	r.GET("/hello", func(c *gee.Context) {
 		c.String(http.StatusOK, "hello %s, you're at %s\n", c.Query("name"), c.Path)
 	})
 
